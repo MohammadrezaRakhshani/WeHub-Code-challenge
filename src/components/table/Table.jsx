@@ -130,7 +130,7 @@ const Table = ({ data }) => {
         </thead>
         <tbody>{renderTableData}</tbody>
       </table>
-        <ul className="pagination">{renderPageNumbers}</ul>
+      <ul className="pagination">{renderPageNumbers}</ul>
     </div>
   );
 };

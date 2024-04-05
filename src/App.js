@@ -1,4 +1,4 @@
-import React, { useState ,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Table from "./components/table/Table";
 import { Users } from "./components/users/users";
@@ -16,11 +16,8 @@ function App() {
   };
 
   const filter = (data) => {
-    return data.filter((item) =>
-      item.gender.includes(gender)
-    );
+    return data.filter((item) => item.gender.includes(gender));
   };
-
 
   const handleGenderFilterChange = (event) => {
     setGender(event.target.value);
@@ -37,11 +34,15 @@ function App() {
         />
         <div className="filterContainer">
           <div className="filterText">Filter By Gender: </div>
-          <select className="dropdown" value={gender} onChange={handleGenderFilterChange}>
-          <option value="">All</option>
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
-        </select>
+          <select
+            className="dropdown"
+            value={gender}
+            onChange={handleGenderFilterChange}
+          >
+            <option value="">All</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
         </div>
       </div>
       <Table data={search(filter(Users))} />

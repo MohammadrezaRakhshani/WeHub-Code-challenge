@@ -11,12 +11,12 @@
   cursor: pointer;
 }
 
-.header-context{
+.header-context {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   font-size: 18px;
-  color: #4F45E4;
+  color: #4f45e4;
 }
 
 .table-data-cell {
@@ -27,7 +27,7 @@
   overflow: hidden;
 }
 
-.pagination-container{
+.pagination-container {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -68,7 +68,7 @@
 .pagination-button-active {
   width: 33px;
   height: 33px;
-  background-color: #4F45E4;
+  background-color: #4f45e4;
   color: white;
   border: 1px solid #ddd;
   text-decoration: none;
