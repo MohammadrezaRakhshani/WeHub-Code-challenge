@@ -1,0 +1,44 @@
+.App {
+  text-align: center;
+  margin: 20px;
+}
+
+.search{
+  padding: 5px;
+  width: 200px;
+  font-size: 20px;
+  border-color: #4F45E4;
+  border-radius: 10px;
+}
+@media screen and (max-width: 470px) {
+  .search{
+    width: 150px;
+  }
+}
+
+.header{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+.dropdown{
+  width: 80px;
+  border-color: #4F45E4;
+  border-radius: 5px;
+}
+
+.filterContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+}
+
+.filterText{
+  margin-right: 5px;
+  font-size: 16px;
+}
