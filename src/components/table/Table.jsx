@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
+import Pagination from "../pagination/Pagination";
 import "./Table.css";
 
 const Table = ({ data }) => {
@@ -55,23 +56,9 @@ const Table = ({ data }) => {
     </tr>
   ));
 
-  const pageNumbers = [];
-  for (let i = 1; i <= Math.ceil(sortedData.length / itemsPerPage); i++) {
-    pageNumbers.push(i);
-  }
-
-  const renderPageNumbers = pageNumbers.map((number) => (
-    <li className="pagination-item" key={number}>
-      <button
-        className={`pagination-button${
-          currentPage === number ? "-active" : ""
-        }`}
-        onClick={() => setCurrentPage(number)}
-      >
-        {number}
-      </button>
-    </li>
-  ));
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
 
   return (
     <div>
@@ -130,7 +117,11 @@ const Table = ({ data }) => {
         </thead>
         <tbody>{renderTableData}</tbody>
       </table>
-      <ul className="pagination">{renderPageNumbers}</ul>
+      <Pagination
+        dataLength={sortedData.length}
+        itemsPerPage={itemsPerPage}
+        onPageChange={handlePageChange}
+      />
     </div>
   );
 };
